@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Death Star Dashboard</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+ 
+  <link rel="stylesheet" href="css/login.css" />
+ 
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="Downloads/Logo.png" alt="Death Star Logo" />
+        <h1>DEATH STAR</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Account</a></li>
+          <li>Dashboard</li>
+          <li>Missions</li>
+          <li>Resources</li>
+          <li>Reports</li>
+          <li>Secure Chat</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1 class="panel-title">Dashboard</h2>
+      <div class="header">
+        <h1 class="title">Dashboard</h1>
+        <div class="timestamp">
+          <div class="time">11:31</div>
+          <div class="user">Grand Moff</div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="card">
+          <div class="number">42</div>
+          <div class="label">Active<br><small>Missions</small></div>
+        </div>
+        <div class="card">
+          <div class="number">128</div>
+          <div class="label">Active<br><small>Commanders</small></div>
+        </div>
+        <div class="card">
+          <div class="number">6000</div>
+          <div class="label">Reports<br><small>Upload</small></div>
+        </div>
+        <div class="card">
+          <div class="number">80%</div>
+          <div class="label">Resource<br><small>Usage</small></div>
+        </div>
+    
+
+        <div class="chart-container">
+          <img src="Downloads/Vector.png" alt="High/Low 圆点分布图" />
+          <div class="chart-legend">
+            <div class="item high"><span class="dot"></span>High</div>
+            <div class="item low"><span class="dot"></span>Low</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  <script>
+    const menuItems = document.querySelectorAll('.sidebar nav li');
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const prev = document.querySelector('.sidebar nav li.active');
+        if (prev) prev.classList.remove('active');
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
